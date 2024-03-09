@@ -1,6 +1,8 @@
-import { useState } from "react";
+/* eslint-disable react/no-unescaped-entities */
+// import { useState } from "react";
 
 // https://uibakery.io/regex-library/phone-number
+// eslint-disable-next-line no-unused-vars
 const isValidPhone = (str) =>
   /^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/.test(
     str
@@ -32,6 +34,7 @@ const fakeCart = [
 
 function CreateOrder() {
   // const [withPriority, setWithPriority] = useState(false);
+  // eslint-disable-next-line no-unused-vars
   const cart = fakeCart;
 
   return (
