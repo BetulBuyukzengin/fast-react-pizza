@@ -29,18 +29,18 @@
 - App componentimizde createBrowserRouter fonksiyonunu react router dom dan import ettikten sonra route ları oluşturuyoruz.
   - Fonksiyonun içinde objeler dizimizde yönlendirmeyi yaparken path ile element kullanıyoruz.
     Path yolu belirtirken, element de componentimize işaret ediyor.
-  - İç içe route oluşturmak için children kullanıyoruz. Ve bu child route ları göstermek için <Outlet/> componentini import ederek kullanıyoruz.
-- RouterProvider a oluşturduğumuz createBrowserRouter fonksiyonunu prop olarak veriyoruz.
+  - İç içe route oluşturmak için children kullanıyoruz. Ve bu child route ları göstermek için `<Outlet/>` componentini import ederek kullanıyoruz.
+- RouterProvider a oluşturduğumuz *createBrowserRouter* fonksiyonunu prop olarak veriyoruz.
 
 ### Loader:
 
 - Sadece o sayfaya gidildiğinde data fetch yapmamızı sağlayan bir yapıdır.
-- Bu yapı useEffect'te olduğu gibi ( önce component renderlanması ve sonra veri yakalanması ) değil, component renderlanması ve veri yakalanması aynı anda yapılıyor.
+- Bu yapı useEffect'te olduğu gibi ( önce component renderlanması ve sonra veri yakalanması ) değil, component renderlanması ve veri yakalanması aynı anda yapılmakta.
 - 3 adımda gerçekleşecek:
   - İlk olarak Api den veri almak için bu işlevi yerine getirecek bir fonksiyon oluşturuyoruz.
-  - Daha sonra bu loader fonksiyonunu, route lardan birine sağlıyoruz(provide) ve bu route daha sonra verileri getirme görevini yapacak.
-  - Sonuncusu veriyi almak. Bunun için useLoaderData() fonksiyonunu import ederek veriyi alıyoruz hatta herhani bir prop, parametre vermemize gerek kalmadan. Otomatik bir şekilde buluyor ve verileri getiriyor.
+  - Daha sonra bu loader fonksiyonunu, route lardan birine sağlıyoruz (provide). (Bu route daha sonra verileri getirme görevini yapacak)
+  - Sonuncusu ise veriyi almak. Bunun için *useLoaderData()* fonksiyonunu import ederek veriyi alıyoruz hatta herhangi bir prop, parametre vermemize gerek kalmadan. Otomatik olarak buluyor ve verileri getiriyor.
 - Artık yeni react router, sadece bileşeni URL ile eşleştirmeden sorumlu değil; her sayfa için componenti renderlarken aynı zamanda verileri de getirmeyi sağlıyor.
-- Veri yüklenirken Loader componentini göstermek için useNavigation() hook unu kullandım. Kullanıldığı sayfanın state ine göre kondisyonel olarak component gösterildi.
-- Hata göstermek için ana route içerisinde errorElement özelliği kullandım ve buna <Error /> componentini verdim.
-- Oluşan hatayı almak için Error componenti içerisinde useRouteError() hook unu kullandım.
+- Veri yüklenirken Loader componentini göstermek için *useNavigation()* hook unu kullandım. Kullanıldığı sayfanın state ine göre kondisyonel olarak component gösterilmiş oldu.
+- Hata göstermek için ana route içerisinde *errorElement* özelliği kullandım ve buna `<Error />` componentini verdim.
+- Oluşan hatayı almak için Error componenti içerisinde *useRouteError()* hook unu kullandım.
