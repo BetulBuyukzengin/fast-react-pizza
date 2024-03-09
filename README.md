@@ -7,7 +7,7 @@
 - Kullanıcı hesabı ve oturum açma işlemi gerektirmez. Kullanıcılar, uygulamayı kullanmadan önce sadece isimlerini girmeliler.
 - Menü içeriği bir api den gelmektedir.
 - Sipariş için kullanıcılar, sepete birden fazla pizza ekleyebilir.
-- Siparişi verebilmeleri için kullanıcı adı, adresi ve telefon numaraları gereklidir.
+- Siparişi verebilmeleri için kullanıcıların adı, adresi ve telefon numaraları gereklidir.
 - Mümkünse teslimatı kolaylaştırmak için GPS konumu kullanılmalıdır.
 - Kullanıcı teslimatını öncelikli olarak işaretlemek isterse, sepet fiyatının %20 sini ek ücret olarak ödemelidir.
 - Kullanıcı siparişini verdikten sonra da öncelikli olarak işaretleme yapabilmelidir.
