@@ -25,7 +25,6 @@
 
 ### Create:
 
-- Projemde router ın son versiyonunu kullandım.
 - Router oluşturmak için öncelikle `npm i react-router-dom@latest` ile kurulum yapmalıyız.
 - App componentimizde createBrowserRouter fonksiyonunu react router dom dan import ettikten sonra route ları oluşturuyoruz.
   - Fonksiyonun içinde objeler dizimizde yönlendirmeyi yaparken path ile element kullanıyoruz.
