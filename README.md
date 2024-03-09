@@ -21,7 +21,7 @@
 - Router
 - Tailwind Css
 
-## Router: <a href="https://reactrouter.com/en/main"> Router doc </a>
+## Router: <a href="https://reactrouter.com/en/main"> Router doküman </a>
 
 ### Create:
 
