@@ -1,11 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
 // import { useState } from "react";
 
-import { Form, redirect, useNavigation } from "react-router-dom";
+import { Form, redirect, useActionData, useNavigation } from "react-router-dom";
 import { createOrder } from "../../services/apiRestaurant";
 
 // https://uibakery.io/regex-library/phone-number
-// eslint-disable-next-line no-unused-vars
 const isValidPhone = (str) =>
   /^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/.test(
     str
@@ -38,6 +37,10 @@ const fakeCart = [
 function CreateOrder() {
   const navigation = useNavigation();
   const isSubmitting = navigation.state === "submitting";
+
+  // For the errors I want to show on the screen
+  const formErrors = useActionData();
+
   // const [withPriority, setWithPriority] = useState(false);
   const cart = fakeCart;
 
@@ -56,8 +59,9 @@ function CreateOrder() {
           <div>
             <input type="tel" name="phone" required />
           </div>
+          {/* show error message */}
+          {formErrors?.phone && <p>{formErrors.phone}</p>}
         </div>
-
         <div>
           <label>Address</label>
           <div>
@@ -99,6 +103,13 @@ export async function action({ request }) {
     cart: JSON.parse(data.cart),
     priority: data.priority === "on",
   };
+  //! Error Management
+  const errors = {};
+  if (!isValidPhone(order.phone))
+    errors.phone = "Please give us your correct phone number";
+  if (Object.keys(errors).length > 0) return errors;
+
+  // If everything is okay,create new order and redirect
   const newOrder = await createOrder(order);
   //! Can not use navigate in the function but can use redirect instead
   // for request and response

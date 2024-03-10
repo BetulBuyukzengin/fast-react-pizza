@@ -23,7 +23,7 @@
 
 ## Router: <a href="https://reactrouter.com/en/main"> Router doküman </a>
 
-### Create:
+### Router nasıl oluşturulur ? :
 
 - Router oluşturmak için öncelikle `npm i react-router-dom@latest` ile kurulum yapmalıyız.
 - App componentimizde createBrowserRouter fonksiyonunu react router dom dan import ettikten sonra route ları oluşturuyoruz.
@@ -53,3 +53,11 @@
 - Veri almak için asenkron bir fonksiyon oluşturdum ve burada form verilerini almak için _formData()_ kullandım.
 - Api dosyamdan createOrder asenkron fonksiyonunu çağırarak _redirect(`/order/${newOrder.id}`)_ ile yönlendirme yaptım. navigate kullanmadım çünkü fonksiyon içerisinde kullanamayız.
 - `<input type="hidden" name="cart" value={JSON.stringify(cart)} />`: Kullanıcının alışveriş sepeti bilgilerini içeren bir JSON dizesinin sunucuya iletilmesi amacıyla kullanılır.
+- _useNavigation()_ kullanarak "order now" butonuna loading özelliği ekledim. Yükleme esnasında buton da desabled olacak.
+
+### Error Handling
+
+- _useActionData()_ hookunun en yaygın kullanılan durumu, form doğrulama hatalarıdır.
+- Sipariş ekleme formunda girilen telefon numarasının format kontrolünü yaparken bu hooku kullandım.
+- Öncelikle boş bir errors adlı objeyi oluşturdum ve telefon numarası formatının girilen numarayla uyumlu olup olmadığını kontrol ettim. Eğer uyumlu değil ise objenin içerisine hata mesajı ile ekledim. Objede en az 1 hata var ise hata döndürülecek.
+- _useActionData()_ yı atadığım değişkeni jsx içerisinde hatayı göstermek için kullandım.
