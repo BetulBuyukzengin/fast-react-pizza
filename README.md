@@ -49,3 +49,7 @@
 ### Action:
 
 - Veri yazmak veya sunucudaki verileri değiştirmek için react router action ı nasıl güncelleriz?
+- Yeni sipariş oluşturmak için CreateOrder da veri manipülasyonunu react router ın _Form_ bileşeni ile yaptım, methodunu da _POST_ olarak tanımladım. Burada action kullanmama gerek kalmıyor çünkü react router otomatik olarak buluyor.
+- Veri almak için asenkron bir fonksiyon oluşturdum ve burada form verilerini almak için _formData()_ kullandım.
+- Api dosyamdan createOrder asenkron fonksiyonunu çağırarak _redirect(`/order/${newOrder.id}`)_ ile yönlendirme yaptım. navigate kullanmadım çünkü fonksiyon içerisinde kullanamayız.
+- `<input type="hidden" name="cart" value={JSON.stringify(cart)} />`: Kullanıcının alışveriş sepeti bilgilerini içeren bir JSON dizesinin sunucuya iletilmesi amacıyla kullanılır.
