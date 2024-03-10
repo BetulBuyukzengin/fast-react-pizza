@@ -75,3 +75,12 @@
   | Güzel bir tasarım sistemine sahip                                | Vanilla CSS'den vazgeçilebiliyor                  |
   | Responsive konusunda zaman tasarrufu sağlar                      | -                                                 |
   | Doküman ve VS Code entegrasyonu mükemmeldir                      | -                                                 |
+
+- `npm install -D tailwindcss postcss autoprefixer` & `npx tailwindcss init -p` ile kurulum yapılır.
+- tailwind.config dosyasına ve index.css dosyasına gerekli eklemeler yapıldıktan sonra işlem tamamlanır.<a href="https://tailwindcss.com/docs/installation">Detaylı bilgi</a>
+- Tailwind CSS IntelliSense eklentisini vs code kurarak sınıf adlarını yazmada işimiz daha da kolaylaşır.
+- `npm install -D prettier prettier-plugin-tailwindcss` ile sınıfları önerilen sınıf sırasına göre otomatik olarak sıralayacaktır. Ardından eklentiyi prettier a ekleyelim.`// prettier.config.cjs
+module.exports = {
+  plugins: ['prettier-plugin-tailwindcss'],
+  singleQuote: true, //  ' ' instead of " "
+}`
