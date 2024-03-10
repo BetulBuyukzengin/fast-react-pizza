@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 // import { useState } from "react";
 
-import { Form, redirect } from "react-router-dom";
+import { Form, redirect, useNavigation } from "react-router-dom";
 import { createOrder } from "../../services/apiRestaurant";
 
 // https://uibakery.io/regex-library/phone-number
@@ -36,8 +36,9 @@ const fakeCart = [
 ];
 
 function CreateOrder() {
+  const navigation = useNavigation();
+  const isSubmitting = navigation.state === "submitting";
   // const [withPriority, setWithPriority] = useState(false);
-  // eslint-disable-next-line no-unused-vars
   const cart = fakeCart;
 
   return (
@@ -78,7 +79,9 @@ function CreateOrder() {
         <div>
           {/* Created for the purpose of passing a JSON string containing the user's shopping cart information to the server */}
           <input type="hidden" name="cart" value={JSON.stringify(cart)} />
-          <button>Order now</button>
+          <button disabled={isSubmitting}>
+            {isSubmitting ? "Placing order..." : "Order now"}
+          </button>
         </div>
       </Form>
     </div>
