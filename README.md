@@ -61,3 +61,15 @@
 - Sipariş ekleme formunda girilen telefon numarasının format kontrolünü yaparken bu hooku kullandım.
 - Öncelikle boş bir errors adlı objeyi oluşturdum ve telefon numarası formatının girilen numarayla uyumlu olup olmadığını kontrol ettim. Eğer uyumlu değil ise objenin içerisine hata mesajı ile ekledim. Objede en az 1 hata var ise hata döndürülecek.
 - _useActionData()_ yı atadığım değişkeni jsx içerisinde hatayı göstermek için kullandım.
+
+## Tailwind Css
+
+- İçerisinde yararlı sınıflar bulunduran (flex,text-align vb.) html veya jsx ile oluşturduğumuz tasarımları şekillendirmek için kullanılan css frameworküdür.
+  | AVANTAJLARI | DEZAVANTAJLARI|
+  |-------------| --------------|
+  | Classlara isim vermek için endişelenmeye gerek kalmaz| | Çok sayıda sınıf olduğu için okunaksız görünmekte|
+  | İşaretleme ve stilleme yaparken sayfalar arası geçmeye gerek yok || Öğrenmeniz gereken çok fazla sınıf adı var|
+  | Anlaşılması ve kullanılması kolay|| Her yeni projede tailwind ı kurmak gerekiyor|
+  | Güzel bir tasarım sistemine sahip| | Vanilla css den vazgeçilebiliyor|
+  | Responsive konusunda zaman tasarrufu sağlar || |
+  | Doküman ve VS Code entegrasyonu mükemmeldir| | |
