@@ -11,7 +11,7 @@ function AppLayout() {
       {isLoading && <Loader />}
       <Header />
       <div>
-        <main className="mx-auto max-w-3xl bg-red-500">
+        <main className="mx-auto max-w-3xl">
           <Outlet />
         </main>
       </div>
