@@ -2,9 +2,9 @@ import CreateUser from '../features/user/CreateUser';
 function Home() {
   return (
     //* add 10 to the y axis (margin)
-    <div className="my-10 text-center">
+    <div className="my-10  px-4 text-center sm:my-16">
       {/* text-[50px] */}
-      <h1 className=" mb-8 text-center text-xl font-semibold ">
+      <h1 className=" mb-8 text-xl font-semibold md:text-3xl ">
         The best pizza.
         <br />
         <span className="text-yellow-500">
