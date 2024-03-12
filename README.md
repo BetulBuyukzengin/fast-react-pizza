@@ -90,5 +90,5 @@ module.exports = {
 
 - Kullanıcı durumuna birçok yerde ihtiyacımız var dolayısıyla globalde kontrol etmek için _redux toolkit_ kullandım.
 - `npm i @reduxjs/toolkit react redux` ile kurulumu tamamladım.
-- İçerisinde initialState ve reducer ın bulunduğu bir userSlice.js dosyası oluşturdum. Ardından redux store u oluşturmak ve tüm reducerları bir arada toplamak için store.js dosyasını oluşturdum.
-- Ve bu dosyayı react projeme bağlamak için main.jsx de componentleri *provider* a sararak store propunu verdim.
+- İçerisinde initialState ve reducer ın bulunduğu bir userSlice.js ve cartSlice.js **dosyası** oluşturdum. Ardından redux store u oluşturmak ve tüm reducerları bir arada toplamak için store.js dosyasını oluşturdum.
+- Ve bu dosyayı react projeme bağlamak için main.jsx de componentleri _provider_ a sararak store propunu verdim.

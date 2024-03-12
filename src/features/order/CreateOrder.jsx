@@ -57,6 +57,7 @@ function CreateOrder() {
           <input
             type="text"
             name="customer"
+            // should not be value, because it should be able to change the value
             defaultValue={username}
             required
             className="input grow"
