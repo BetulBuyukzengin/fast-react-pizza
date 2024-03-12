@@ -20,6 +20,7 @@
 - React JS
 - Router
 - Tailwind Css
+- Redux
 
 ## Router: <a href="https://reactrouter.com/en/main"> Router doküman </a>
 
@@ -84,3 +85,10 @@ module.exports = {
   plugins: ['prettier-plugin-tailwindcss'],
   singleQuote: true, //  ' ' instead of " "
 }`
+
+## Redux
+
+- Kullanıcı durumuna birçok yerde ihtiyacımız var dolayısıyla globalde kontrol etmek için _redux toolkit_ kullandım.
+- `npm i @reduxjs/toolkit react redux` ile kurulumu tamamladım.
+- İçerisinde initialState ve reducer ın bulunduğu bir userSlice.js dosyası oluşturdum. Ardından redux store u oluşturmak ve tüm reducerları bir arada toplamak için store.js dosyasını oluşturdum.
+- Ve bu dosyayı react projeme bağlamak için main.jsx de componentleri *provider* a sararak store propunu verdim.
