@@ -1,16 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  //   cart: [],
-  cart: [
-    {
-      pizzaId: 12,
-      name: 'Mediterranean',
-      quantity: 2,
-      unitPrice: 16,
-      totalPrice: 32,
-    },
-  ],
+  cart: [],
+  // cart: [
+  //   {
+  //     pizzaId: 12,
+  //     name: 'Mediterranean',
+  //     quantity: 2,
+  //     unitPrice: 16,
+  //     totalPrice: 32,
+  //   },
+  // ],
 };
 const cartSlice = createSlice({
   name: 'cart',
@@ -51,3 +51,13 @@ export const {
 } = cartSlice.actions;
 
 export default cartSlice.reducer;
+
+//should get
+export const getTotalCartQuantity = (state) =>
+  state.cart.cart.reduce((sum, item) => sum + item.quantity, 0);
+
+export const getTotalCartPrice = (state) =>
+  state.cart.cart.reduce((sum, item) => sum + item.totalPrice, 0);
+
+// 'reselect' --> Having selectors here may be a problem for optimization.
+// Check the redux documentation to solve the problem.
