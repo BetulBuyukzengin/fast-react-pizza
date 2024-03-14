@@ -1,21 +1,21 @@
-# Fast React Pizza
+# 🍕Fast React Pizza 
 
 - Kullanıcıların menüden bir veya daha fazla pizza sipariş edebileceği basit bir uygulama.
 
-## Proje Özellikleri:
+## 📝Proje Özellikleri:
 
 - Kullanıcı hesabı ve oturum açma işlemi gerektirmez. Kullanıcılar, uygulamayı kullanmadan önce sadece isimlerini girmeliler.
 - Menü içeriği bir api den gelmektedir.
 - Sipariş için kullanıcılar, sepete birden fazla pizza ekleyebilir.
 - Siparişi verebilmeleri için kullanıcıların adı, adresi ve telefon numaraları gereklidir.
-- Mümkünse teslimatı kolaylaştırmak için GPS konumu kullanılmalıdır.
+- Teslimatı kolaylaştırmak için GPS konumu kullanılmaktadır.
 - Kullanıcı teslimatını öncelikli olarak işaretlemek isterse, sepet fiyatının %20 sini ek ücret olarak ödemelidir.
 - Kullanıcı siparişini verdikten sonra da öncelikli olarak işaretleme yapabilmelidir.
 - Siparişler, sipariş verilerini (kullanıcı verileri + seçilen pizzalar) içeren bir POST isteğinin API'ye gönderilmesiyle gerçekleştirilir.
 - Ödemeler teslimatta yapılır, dolayısıyla uygulamada herhangi bir ödeme işlemine gerek yoktur.
 - Kullanıcı sonradan siparişini arayıp, incelemek istediğinde her sipariş kendine ait benzersiz bi id almalıdır.
 
-# Kullanılan Teknolojiler:
+# 🛠Kullanılan Teknolojiler:
 
 - React JS
 - Router
@@ -28,10 +28,10 @@
 
 - Router oluşturmak için öncelikle `npm i react-router-dom@latest` ile kurulum yapmalıyız.
 - App componentimizde createBrowserRouter fonksiyonunu react router dom dan import ettikten sonra route ları oluşturuyoruz.
-  - Fonksiyonun içinde objeler dizimizde yönlendirmeyi yaparken path ile element özelliklerini kullanıyoruz.
+  - Fonksiyonun içinde objeler dizimizde yönlendirmeyi yaparken *path* ile *element* özelliklerini kullanıyoruz.
     Path yolu belirtirken, element de componentimize işaret ediyor.
   - İç içe route oluşturmak için children kullanıyoruz. Ve bu child route ları göstermek için `<Outlet/>` componentini import ederek kullanıyoruz.
-- RouterProvider a oluşturduğumuz _createBrowserRouter_ fonksiyonunu prop olarak veriyoruz.
+- RouterProvider a, oluşturduğumuz _createBrowserRouter_ fonksiyonunu prop olarak veriyoruz.
 
 ### Loader:
 
