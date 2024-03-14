@@ -103,11 +103,11 @@ module.exports = {
 
 ## useFetcher():
 
-- Menu route undaki verileri oraya gitmeden kullanmak için useFetcher() fonksiyonundan faydalandım. (Order.jsx)
+- Menu route undaki verileri navigation olmadan yani oraya gitmeden kullanmak için useFetcher() fonksiyonundan faydalandım. (Order.jsx)
   `  const fetcher = useFetcher();
-  useEffect(
-    function () {
-      if (!fetcher.data && fetcher.state === 'idle') fetcher.load('/menu');
-    },
-    [fetcher],
-  );`
+useEffect(
+  function () {
+    if (!fetcher.data && fetcher.state === 'idle') fetcher.load('/menu');
+  },
+  [fetcher],
+);`
