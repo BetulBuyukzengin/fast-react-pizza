@@ -100,3 +100,14 @@ module.exports = {
   - _pending :_ Bir asenkron işlemin başladığını belirtmek için kullanılır.
   - _fulfilled_ : Bir asenkron işlemin başarıyla tamamlandığını belirtmek için kullanılır.
   - _rejected_ : Bir asenkron işlemin başarısız olduğunu belirtmek için kullanılır.
+
+## useFetcher():
+
+- Menu route undaki verileri oraya gitmeden kullanmak için useFetcher() fonksiyonundan faydalandım. (Order.jsx)
+  `  const fetcher = useFetcher();
+  useEffect(
+    function () {
+      if (!fetcher.data && fetcher.state === 'idle') fetcher.load('/menu');
+    },
+    [fetcher],
+  );`
