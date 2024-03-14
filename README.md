@@ -90,5 +90,13 @@ module.exports = {
 
 - Kullanıcı durumuna birçok yerde ihtiyacımız var dolayısıyla globalde kontrol etmek için _redux toolkit_ kullandım.
 - `npm i @reduxjs/toolkit react redux` ile kurulumu tamamladım.
-- İçerisinde initialState ve reducer ın bulunduğu bir userSlice.js ve cartSlice.js **dosyası** oluşturdum. Ardından redux store u oluşturmak ve tüm reducerları bir arada toplamak için store.js dosyasını oluşturdum.
+- İçerisinde initialState ve reducer ın bulunduğu bir userSlice.js ve cartSlice.js dosyası oluşturdum. Ardından redux store u oluşturmak ve tüm reducerları bir arada toplamak için store.js dosyasını oluşturdum.
 - Ve bu dosyayı react projeme bağlamak için main.jsx de componentleri _provider_ a sararak store propunu verdim.
+
+### Kullandığım, redux toolkit tarafından sağlanan özel action türleri:
+
+- Bu özel action türleri, Redux Toolkit'in createAsyncThunk fonksiyonu ile birlikte kullanılarak otomatik olarak oluşturulabilir.
+- Genellikle Redux ile asenkron işlemleri yönetmek için kullanılır.
+  - _pending :_ Bir asenkron işlemin başladığını belirtmek için kullanılır.
+  - _fulfilled_ : Bir asenkron işlemin başarıyla tamamlandığını belirtmek için kullanılır.
+  - _rejected_ : Bir asenkron işlemin başarısız olduğunu belirtmek için kullanılır.
