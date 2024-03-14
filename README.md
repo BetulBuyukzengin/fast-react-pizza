@@ -111,3 +111,12 @@ useEffect(
   },
   [fetcher],
 );`
+- Order ı güncellemek için fetch.loader yerine forma sardım.
+  `function UpdateOrder({ order }) {
+  const fetcher = useFetcher();
+  return (
+    <fetcher.Form method="PATCH" className="text-right">
+      <Button type="primary">Make priority</Button>;
+    </fetcher.Form>
+  );
+}`
