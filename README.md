@@ -12,7 +12,7 @@
 - Kullanıcı teslimatını öncelikli olarak işaretlemek isterse, sepet fiyatının %20 sini ek ücret olarak ödemelidir.
 - Kullanıcı siparişini verdikten sonra da öncelikli olarak işaretleme yapabilmelidir.
 - Siparişler, sipariş verilerini (kullanıcı verileri + seçilen pizzalar) içeren bir POST isteğinin API'ye gönderilmesiyle gerçekleştirilir.
-- Ödemeler teslimatta yapılır, dolayısıyla uygulamada herhangi bir ödeme işlemine gerek yoktur.
+- Ödemeler teslimatta yapılır, dolayısıyla uygulamada herhangi bir ödeme işlemi yoktur.
 - Kullanıcı sonradan siparişini arayıp, incelemek istediğinde her sipariş kendine ait benzersiz bir id almalıdır.
 
 # 🛠Kullanılan Teknolojiler:
