@@ -13,7 +13,7 @@
 - Kullanıcı siparişini verdikten sonra da öncelikli olarak işaretleme yapabilmelidir.
 - Siparişler, sipariş verilerini (kullanıcı verileri + seçilen pizzalar) içeren bir POST isteğinin API'ye gönderilmesiyle gerçekleştirilir.
 - Ödemeler teslimatta yapılır, dolayısıyla uygulamada herhangi bir ödeme işlemi yoktur.
-- Kullanıcı sonradan siparişini arayıp, incelemek istediğinde her sipariş kendine ait benzersiz bir id almalıdır.
+- Kullanıcının siparişi oluşturulduğunda, her siparişe ait bir id oluşturulur ve bu id ile sipariş hakkında bilgi alınabilir.
 
 # 🛠Kullanılan Teknolojiler:
 
