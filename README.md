@@ -1,5 +1,5 @@
 # 🍕Fast React Pizza 
-## Canlı versiyon : <a href="https://main--fast-pizza-app-bb.netlify.app/">Fast Pizza</a>
+## Canlı versiyon : <a href="https://fast-pizza-app-bb.netlify.app/">Fast Pizza</a>
 - Kullanıcıların menüden bir veya daha fazla pizza sipariş edebileceği bir web uygulamasıdır.
 
 ## 📝Proje Özellikleri:
