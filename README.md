@@ -1,6 +1,6 @@
 # 🍕Fast React Pizza 
 ## Canlı versiyon : <a href="https://fast-pizza-app-bb.netlify.app/">Fast Pizza</a>
-- Kullanıcıların menüden bir veya daha fazla pizza sipariş edebileceği bir web uygulamasıdır.
+- Vite ile oluşturduğum, kullanıcıların menüden bir veya daha fazla pizza sipariş edebileceği bir react web uygulamasıdır.
 
 ## 📝Proje Özellikleri:
 
